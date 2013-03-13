@@ -3,8 +3,9 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.12'
 gem 'pg'
 gem 'thin'
-gem 'sass-rails',     '~> 3.2.3'
-gem 'bootstrap-sass', '~> 2.3.0.1'
+gem 'sass-rails',               '~> 3.2.3'
+gem 'bootstrap-sass',           '~> 2.3.0.1'
+gem 'active_model_serializers'
 
 group :development, :test do
   gem 'pry'
