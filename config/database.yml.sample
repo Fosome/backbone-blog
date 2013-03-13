@@ -1,0 +1,15 @@
+development:
+  adapter: postgresql
+  database: backbone_blog_development
+  username: ryanfoster
+  password:
+  pool: 5
+  timeout: 5000
+
+test:
+  adapter: postgresql
+  database: backbone_blog_test
+  username: ryanfoster
+  password:
+  pool: 5
+  timeout: 5000
