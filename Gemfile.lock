@@ -43,6 +43,7 @@ GEM
       execjs
     coffee-script-source (1.6.1)
     daemons (1.1.9)
+    ejs (1.1.1)
     erubis (2.7.0)
     eventmachine (1.0.1)
     execjs (1.4.0)
@@ -124,6 +125,7 @@ DEPENDENCIES
   active_model_serializers
   bootstrap-sass (~> 2.3.0.1)
   coffee-rails (~> 3.2.1)
+  ejs
   jquery-rails
   pg
   pry

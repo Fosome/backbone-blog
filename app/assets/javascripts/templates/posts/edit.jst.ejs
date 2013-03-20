@@ -1,0 +1,22 @@
+<h2>
+  Edit Post
+</h2>
+
+<form>
+  <div id="form_errors"></div>
+
+  <fieldset>
+    <label for="post_title">Title</label>
+    <input type="textfield" id="post_title" value="<%= post.get('title') %>">
+
+    <label for="post_author">Author</label>
+    <input type="textfield" id="post_author" value="<%= post.get('author') %>">
+
+    <label for="post_body">Post Body</label>
+    <textarea id="post_body" rows="5"><%= post.get('body') %></textarea>
+
+    <hr>
+    <button id="update_post" class="btn">Save</button>
+    <a href="#/posts/<%= post.get('id') %>">Cancel</a>
+  </fieldset>
+</form>

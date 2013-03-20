@@ -1,0 +1,22 @@
+<h2>
+  Posts
+</h2>
+
+<table class="table">
+  <tr>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Posted</th>
+  </tr>
+  <% _.each(posts, function(post) { %>
+    <tr>
+      <td><a href="#/posts/<%= post.get('id') %>"><%= post.get('title') %></a></td>
+      <td><%= post.get('author') %></td>
+      <td><%= new Date(post.get('created_at')).toLocaleString() %></td>
+    </tr>
+  <% }) %>
+</table>
+
+<ul class="unstyled">
+  <li><a href="#/posts/new">New Post</a></li>
+</ul>
