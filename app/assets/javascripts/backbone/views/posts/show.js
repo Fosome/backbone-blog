@@ -11,14 +11,28 @@ Blog.Views.PostShow = Backbone.View.extend({
 		_.bindAll(this, "deleteSuccess", "deleteError");
 	},
 
-	render: function() {
-		this.$el.html(this.template({ post: this.model }));
-		return this;
-	},
-
 	show: function(post) {
 		this.model = post;
-		post.on("all", this.render, this);
+		post.on("sync", this.render, this);
+	},
+
+	render: function() {
+		this.$el.html(this.template({ post: this.model }));
+
+		// render comments
+		var comments = this.model.comments();
+		comments.fetch();
+		var comments_index = new Blog.Views.CommentIndex({
+			collection: comments
+		});
+
+		// render new comment form
+		var comment_new = new Blog.Views.CommentNew({
+			collection: comments
+		});
+		comment_new.render();
+
+		return this;
 	},
 
 	delete: function(e) {

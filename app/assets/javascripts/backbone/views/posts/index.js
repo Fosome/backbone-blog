@@ -3,7 +3,7 @@ Blog.Views.PostIndex = Backbone.View.extend({
 	template: JST["templates/posts/table"],
 
 	initialize: function() {
-		this.options.collection.on("all", this.render, this);
+		this.options.collection.on("sync", this.render, this);
 	},
 
 	render: function() {

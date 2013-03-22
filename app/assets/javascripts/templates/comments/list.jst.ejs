@@ -1,0 +1,9 @@
+<% if (comments.length > 0) { %>
+  <ul>
+    <% _.each(comments, function(comment) { %>
+      <li><%= comment.get("body") %></li>
+    <% }) %>
+  </ul>
+<% } else { %>
+  <p><i>No comments</i></p>
+<% } %>

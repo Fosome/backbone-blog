@@ -11,6 +11,10 @@ Blog.Models.Post = Backbone.Model.extend({
 		if (attrs.name == "") {
 			return { name: "required" }
 		}
+	},
+
+	comments: function() {
+		return new Blog.Collections.Comments([], { post_id: this.get('id') });
 	}
 });
 

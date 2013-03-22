@@ -33,13 +33,12 @@ Blog.Routers.Posts = Backbone.Router.extend({
 		var index_view = new Blog.Views.PostIndex({
 			collection: self.posts
 		});
-		index_view.render();
 	},
 
 	new: function() {
 		console.log("rendering post#new");
 
-		new_view.render();
+		self.new_view.render();
 	},
 
 	show: function(id) {
@@ -47,7 +46,7 @@ Blog.Routers.Posts = Backbone.Router.extend({
 
 		var post = new Blog.Models.Post({ id: id });
 		post.fetch();
-		
+
 		self.show_view.show(post);
 	},
 

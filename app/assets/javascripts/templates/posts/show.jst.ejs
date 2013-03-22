@@ -10,8 +10,15 @@
   <%= post.get('body') %>
 </p>
 
-<ul class="unstyled">
+<ul class="unstyled inline">
   <li><a href="#/posts/<%= post.get('id') %>/edit">Edit Post</a></li>
   <li><a href="#/posts/<%= post.get('id') %>" class="delete-link">Delete Post</a></li>
   <li><a href="#/posts">Back to Posts</a></li>
 </ul>
+
+<h3>
+  Comments
+</h3>
+
+<div id="new_post_comment"></div>
+<div id="post_comments"></div>
